@@ -28,7 +28,11 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".registerActivity" />
-        <activity android:name=".tabunganActivity"></activity>
+        <activity android:name=".tabunganActivity" />
+        <activity
+            android:name=".activity_mimpi"
+            android:label="@string/title_activity_mimpi"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
