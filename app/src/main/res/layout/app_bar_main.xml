@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="me.yoniffafan.android.celengin.MainActivity">
 
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,6 +23,15 @@
 
     <include layout="@layout/content_main" />
 
+    <Button
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="175dp"
+        android:layout_marginLeft="210dp"
+        android:background="@color/colorPrimary"
+        android:text="OK"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" ></Button>
 
 
 </android.support.design.widget.CoordinatorLayout>
