@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "427458700037",
+    "firebase_url": "https://celengin-93578.firebaseio.com",
+    "project_id": "celengin-93578",
+    "storage_bucket": "celengin-93578.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427458700037:android:c9ecf7f7712ac3ca",
+        "android_client_info": {
+          "package_name": "me.yoniffafan.android.celengin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427458700037-0qvnn23fn0uocjmn9dktr8lnlr5g6u0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9RDt91LbKYNML-KiD16N1DmKSaxtF3Nc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
