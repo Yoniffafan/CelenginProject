@@ -22,6 +22,19 @@
 
     <include layout="@layout/content_main" />
 
+<<<<<<< HEAD
 
+=======
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="#0000ff"
+        android:src="@drawable/ic_add_black"
+
+        />
+>>>>>>> 7ce16ecaf255b7d53a71f6bf628d0395c21e3d47
 
 </android.support.design.widget.CoordinatorLayout>

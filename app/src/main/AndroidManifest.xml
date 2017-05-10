@@ -27,8 +27,14 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
+<<<<<<< HEAD
         <activity android:name=".registerActivity" />
         <activity android:name=".tabunganActivity"></activity>
+=======
+        <activity
+            android:name=".registeractivity"
+            android:label="@string/title_activity_registeractivity"></activity>
+>>>>>>> 7ce16ecaf255b7d53a71f6bf628d0395c21e3d47
     </application>
 
 </manifest>

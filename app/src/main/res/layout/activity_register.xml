@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -14,12 +15,50 @@
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
             tools:layout_editor_absoluteX="8dp">
+=======
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="me.yoniffafan.android.celengin.registeractivity">
+
+    <!-- Login progress -->
+
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android: ="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+>>>>>>> 7ce16ecaf255b7d53a71f6bf628d0395c21e3d47
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <AutoCompleteTextView
+<<<<<<< HEAD
                     android:id="@+id/fullname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -27,6 +66,14 @@
                     android:inputType="text"
                     android:maxLines="1"
                     android:singleLine="true"/>
+=======
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Name" />
+>>>>>>> 7ce16ecaf255b7d53a71f6bf628d0395c21e3d47
 
             </android.support.design.widget.TextInputLayout>
 
@@ -35,6 +82,7 @@
                 android:layout_height="wrap_content">
 
                 <AutoCompleteTextView
+<<<<<<< HEAD
                     android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -42,6 +90,14 @@
                     android:inputType="text"
                     android:maxLines="1"
                     android:singleLine="true"/>
+=======
+                    android:id="@+id/usernameregis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="username" />
+>>>>>>> 7ce16ecaf255b7d53a71f6bf628d0395c21e3d47
 
             </android.support.design.widget.TextInputLayout>
 
@@ -53,10 +109,17 @@
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:singleLine="true"/>
+=======
+                    android:hint="@string/prompt_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+>>>>>>> 7ce16ecaf255b7d53a71f6bf628d0395c21e3d47
 
             </android.support.design.widget.TextInputLayout>
 
@@ -68,13 +131,21 @@
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:hint="Password"
+=======
+                    android:hint="password"
+>>>>>>> 7ce16ecaf255b7d53a71f6bf628d0395c21e3d47
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="@string/action_sign_in_short"
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
+<<<<<<< HEAD
                     android:singleLine="true"/>
+=======
+                    android:singleLine="true" />
+>>>>>>> 7ce16ecaf255b7d53a71f6bf628d0395c21e3d47
 
             </android.support.design.widget.TextInputLayout>
 
@@ -86,12 +157,17 @@
                     android:id="@+id/passwordrepeat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:hint="Password (repeat)"
+=======
+                    android:hint="password (repeat)"
+>>>>>>> 7ce16ecaf255b7d53a71f6bf628d0395c21e3d47
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="@string/action_sign_in_short"
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
+<<<<<<< HEAD
                     android:singleLine="true"/>
 
             </android.support.design.widget.TextInputLayout>
@@ -112,3 +188,25 @@
 
 
 </android.support.constraint.ConstraintLayout>
+=======
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/email_sign_in_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Register"
+                android:textStyle="bold"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#fff"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+>>>>>>> 7ce16ecaf255b7d53a71f6bf628d0395c21e3d47
