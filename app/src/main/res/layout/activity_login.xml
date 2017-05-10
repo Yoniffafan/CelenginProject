@@ -75,17 +75,6 @@
                 android:onClick="loginFunction"
                 />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="don't have account?"
-                android:textAlignment="center"
-                android:textSize="20dp"
-                android:layout_margin="10dp"
-
-                />
-
             <Button
                 android:id="@+id/registerBtn"
                 android:layout_width="match_parent"

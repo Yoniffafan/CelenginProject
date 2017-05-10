@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.net.Uri;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,17 +24,16 @@ import java.util.List;
 
 public class MyListAdapter extends BaseAdapter {
     List<String> gambar, mimpi;
-    List<Integer> total;
-    Dialog dialog;
+    List<Integer> total, progressValue;
 
     private static LayoutInflater layoutInflater = null;
     Context mContext;
 
-
-    public MyListAdapter(List<String> gambar, List<String> mimpi, List<Integer> total, Context mContext) {
+    public MyListAdapter(List<String> gambar, List<String> mimpi, List<Integer> total, List<Integer> progressValue, Context mContext) {
         this.gambar = gambar;
         this.mimpi = mimpi;
         this.total = total;
+        this.progressValue = progressValue;
         this.mContext = mContext;
         layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -70,6 +70,13 @@ public class MyListAdapter extends BaseAdapter {
 
         holder.mimpi.setText(mimpi.get(position));
         holder.total.setText(String.valueOf(total.get(position)));
+        try {
+//            holder.progressBar.setProgress(50);
+            holder.progressBar.setProgress(progressValue.get(position));
+        } catch (Exception e){
+            Log.e("E: ", e.getLocalizedMessage());
+            holder.progressBar.setProgress(0);
+        }
         return view;
     }
 

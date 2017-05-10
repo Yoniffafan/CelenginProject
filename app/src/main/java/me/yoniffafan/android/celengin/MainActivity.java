@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.DialogFragment;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,6 +21,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +32,8 @@ public class MainActivity extends AppCompatActivity
     ListView listView;
 
     List<String> gambar, mimpi;
-    List<Integer> total;
+    List<Integer> total, progressValue;
+    int proVal;
 
     Context mContext = this;
     MyListAdapter adapter;
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity
     Button tambah, tambahBtn;
     Dialog dialog;
     Dialog tambahDialog;
+    Integer masukan, nilaiAwal, nilaiAkhir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +53,9 @@ public class MainActivity extends AppCompatActivity
         mimpi = new ArrayList<>();
         gambar = new ArrayList<>();
         total = new ArrayList<>();
+        progressValue = new ArrayList<>();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         listView = (ListView) findViewById(R.id.listview);
         dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog);
@@ -85,6 +90,7 @@ public class MainActivity extends AppCompatActivity
                         mimpi.add(tambahMimpi.getText().toString());
                         gambar.add(tambahGambar.getText().toString());
                         total.add(Integer.parseInt(tambahTotal.getText().toString()));
+                        progressValue.add(0);
                         tambahDialog.dismiss();
                         updateUI();
                     }
@@ -93,8 +99,28 @@ public class MainActivity extends AppCompatActivity
         });
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long id){
+//                Log.d("INDEX: ", String.valueOf(progressValue.get(position)));
+                nilaiAwal = total.get(position);
+                proVal = progressValue.get(position);
                 dialog.show();
+                tambah.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        masukan = Integer.parseInt(pemasukan.getText().toString());
+                        int calc = Math.round(100 * masukan / nilaiAwal);
+                        int fix = proVal + calc;
+                        if (fix >= nilaiAwal) {
+                            fix = 100;
+                            progressValue.set(position, fix);
+                        } else {
+                            progressValue.set(position, fix);
+                        }
+//                        Log.d("INDEX: ", String.valueOf(calc));
+                        updateUI();
+                        dialog.dismiss();
+                    }
+                });
             }
         });
     }
@@ -159,7 +185,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void updateUI() {
-        MyListAdapter adapter = new MyListAdapter(gambar, mimpi, total, mContext);
+        MyListAdapter adapter = new MyListAdapter(gambar, mimpi, total, progressValue, mContext);
         listView.setAdapter(adapter);
     }
 }
